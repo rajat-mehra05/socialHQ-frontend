@@ -36,4 +36,5 @@ yarn dev
 
 
 ## License
-[MIT](https://choosealicense.com/licenses/mit/)
+Published and distributed under the [MIT](https://choosealicense.com/licenses/mit/) License.
+
