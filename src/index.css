@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "PrintClearly";
+  src: url("../public/fonts/PrintClearly.otf");
+}
+
+body::-webkit-scrollbar {
+  background: white;
+  behavior: smooth;
+  width: 15px;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #112b3c;
+  border-radius: 6px;
+  border: 3px solid white;
+}
