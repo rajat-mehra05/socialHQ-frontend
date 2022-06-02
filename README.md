@@ -7,3 +7,33 @@
   - Follow/Unfollow other users
   - Update own profile picture
   - Search other users
+
+# Setup
+
+#### Clone the repository
+
+```bash
+git clone https://github.com/rajat-mehra05/socialHQ-frontend
+```
+
+## Usage
+
+#### Run in production mode
+
+```bash
+yarn start
+```
+
+> Make sure to install dependencies with `yarn/npm` command before deploy.
+
+#### Run in development mode
+
+```bash
+yarn dev
+```
+
+> Make sure to install dependencies with `yarn/npm` command before development.
+
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
