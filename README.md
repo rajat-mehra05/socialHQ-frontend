@@ -1,5 +1,5 @@
 # About the Project
-  Social HQ is a social platform where people can explore and share posts.
+  **Social HQ** is a social platform where people can explore and share posts.
   
   *Salient features*
   - Create/Upload/Delete posts
