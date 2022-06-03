@@ -173,7 +173,7 @@ const Card = ({ item, setData, data }) => {
       {/* image section */}
 
       <img
-        className="w-full rounded-2xl"
+        className="w-full h-64 object-cover rounded-2xl"
         src={item.photo}
         alt="postPic"
         loading="lazy"

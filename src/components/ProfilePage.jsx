@@ -80,25 +80,24 @@ const ProfilePage = () => {
             />
           </div>
 
-          <div className="flex justify-center mx-auto">
-            <label
-              for="files"
-              className="bg-gray-100 text-black text-lg font-semibold h-8 mt-2 rounded px-2 w-72"
-            >
-              Choose Avatar
-            </label>
-            <input
-              id="files"
-              type="file"
-              onChange={(e) => updatePhoto(e.target.files[0])}
-              style={{ visibility: "hidden" }}
-            />
-          </div>
-
           <div className="mt-8">
             <h2 className="font-bold text-center text-xl"> {state?.name} </h2>
+            <div className="flex justify-center mx-auto relative">
+              <label
+                for="files"
+                className="bg-gray-100 text-center text-black text-lg font-semibold h-8 mt-2 rounded px-2 w-72"
+              >
+                Choose Avatar
+              </label>
+              <input
+                id="files"
+                type="file"
+                onChange={(e) => updatePhoto(e.target.files[0])}
+                className="bg-red-400 absolute left-0 top-0 w-0 h-0"
+              />
+            </div>
 
-            <div className="flex gap-4 my-4">
+            <div className="flex gap-4 my-4 justify-center">
               <h5>
                 {" "}
                 {photos?.length} <span className="font-semibold">Posts</span>{" "}
@@ -123,7 +122,7 @@ const ProfilePage = () => {
           return (
             <img
               key={item._id}
-              className="w-72 h-72 object-fit"
+              className="w-72 h-72 object-cover"
               src={item.photo}
               alt={item.title}
               loading="lazy"
