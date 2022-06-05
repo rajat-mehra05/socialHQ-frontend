@@ -33,7 +33,7 @@ const ProfilePage = () => {
       })
         .then((res) => res.json())
         .then((data) => {
-          fetch("/updatepic", {
+          fetch(`${API_URL}/updatepic`, {
             method: "put",
             headers: {
               "Content-Type": "application/json",
