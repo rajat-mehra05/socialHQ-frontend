@@ -80,48 +80,66 @@ const SignUp = () => {
   }, [url]);
 
   return (
-    <div className="flex flex-col justify-center items-center">
-      <h1 className="text-3xl text-zinc-900 text-center my-2">
-        {" "}
-        Create a new account{" "}
-      </h1>
-      <div className="border-2 border-zinc-400 p-8">
-        <div className="flex flex-col">
-          <input
-            type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            className="rounded h-12 w-72 sm:w-full px-4 mb-4 bg-emerald-100 font-semibold text-zinc-800 border-2 border-zinc-500"
-            placeholder="Enter name"
-          />
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className="rounded h-12 w-72 sm:w-full px-4 mb-4 bg-emerald-100 font-semibold text-zinc-800 border-2 border-zinc-500"
-            placeholder="Enter email"
-          />
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            className="rounded h-12 w-72 sm:w-full  px-4 mb-4 bg-emerald-100 font-semibold text-zinc-800 border-2 border-zinc-500"
-            placeholder="Enter password"
-          />
-          <div className="flex flex-col gap-2">
-            <span className="font-semibold"> Upload your picture</span>
-            <input type="file" onChange={(e) => setImage(e.target.files[0])} />
-          </div>
-          <button
-            onClick={() => PostData()}
-            className="bg-gray-800 hover:bg-gray-900 text-white text-lg font-semibold h-12 mb-4 mt-2 rounded px-4 w-full"
-          >
-            Sign up
-          </button>
-          <h3 className="hover:underline">
-            <Link to="/login"> Already have an account? </Link>
-          </h3>
+    <div className="sm:flex-row flex flex-col gap-12 sm:gap-32 py-6 justify-center bg-gradient-to-l from-slate-200 to-slate-600">
+      <div className="flex flex-col justify-center items-cente">
+        <div className="flex items-center gap-2 bg-gray-800 justify-center mb-2">
+          <span className="w-8 h-8">
+            {" "}
+            <img src="/key.png" alt="key" className="w-full h-full" />{" "}
+          </span>
+          <h1 className="text-2xl text-white font-semibold my-2">
+            {" "}
+            Create a new account{" "}
+          </h1>
         </div>
+        <div className="p-8 bg-gradient-to-l from-slate-200 to-slate-600">
+          <div className="flex flex-col">
+            <input
+              type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              className="rounded h-12 w-72 sm:w-full px-4 mb-4 font-semibold text-zinc-800 border-2 border-zinc-500"
+              placeholder="Enter name"
+            />
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="rounded h-12 w-72 sm:w-full px-4 mb-4 font-semibold text-zinc-800 border-2 border-zinc-500"
+              placeholder="Enter email"
+            />
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className="rounded h-12 w-72 sm:w-full  px-4 mb-4 font-semibold text-zinc-800 border-2 border-zinc-500"
+              placeholder="Enter password"
+            />
+            <div className="flex flex-col gap-2">
+              <span className="font-semibold"> Upload your picture</span>
+              <input
+                type="file"
+                onChange={(e) => setImage(e.target.files[0])}
+              />
+            </div>
+            <button
+              onClick={() => PostData()}
+              className="bg-gray-800 hover:bg-gray-900 text-white text-lg font-semibold h-12 mb-4 mt-2 rounded px-4 w-full"
+            >
+              Sign up
+            </button>
+            <h3 className="hover:underline">
+              <Link to="/login"> Already have an account? Log in. </Link>
+            </h3>
+          </div>
+        </div>
+      </div>
+      <div className="sm:w-[600px] w-96">
+        <img
+          src="/signup.png"
+          alt="picture1"
+          className="w-full h-full object-cover"
+        />
       </div>
     </div>
   );
