@@ -8,6 +8,15 @@
   - Update own profile picture
   - Search other users
 
+## Preview
+
+![image](https://user-images.githubusercontent.com/35677839/172062216-79967c0c-680d-46af-a762-a0b71e86b3c4.png)
+
+![image](https://user-images.githubusercontent.com/35677839/172062298-a1152062-da55-431c-8c6b-6363a2845172.png)
+
+![image](https://user-images.githubusercontent.com/35677839/172062338-cef83385-8610-4c97-9723-d75fe331e933.png)
+
+
 # Setup
 
 #### Clone the repository
