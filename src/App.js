@@ -3,6 +3,7 @@ import {
   BrowserRouter as Router,
   Route,
   Routes,
+  useLocation,
   useNavigate,
 } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
@@ -23,6 +24,8 @@ const { Provider } = UserContext;
 const Routing = () => {
   const [auth, setAuth] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
+  console.log(location);
 
   const { dispatch } = useContext(UserContext);
 
@@ -32,8 +35,15 @@ const Routing = () => {
     if (user) {
       dispatch({ type: "USER", payload: user });
     }
+
+    if (
+      !user &&
+      location.pathname !== "/signup" &&
+      location.pathname !== "/login"
+    )
+      navigate("/login");
     setAuth(!!user);
-  }, [dispatch, navigate]);
+  }, [dispatch, location, navigate]);
 
   return (
     <Routes>
