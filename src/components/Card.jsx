@@ -127,7 +127,7 @@ const Card = ({ item, setData, data }) => {
 
   return (
     <div
-      className="shadow-sm max-w-2xl p-2 rounded-2xl bg-[#00000] border-2 border-gray-200"
+      className="shadow-sm max-w-2xl p-2 rounded-2xl bg-[#00000] border-2 border-gray-200 bg-[#F6FBF4]"
       key={item._id}
     >
       <div className="flex justify-between p-6">
