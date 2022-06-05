@@ -25,7 +25,6 @@ const Routing = () => {
   const [auth, setAuth] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
-  console.log(location);
 
   const { dispatch } = useContext(UserContext);
 
