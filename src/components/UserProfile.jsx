@@ -96,7 +96,7 @@ const UserProfile = () => {
   };
 
   return (
-    <div className="bg-gradient-to-l from-gray-200 to-zinc-300">
+    <div className="bg-white">
       {userProfile ? (
         <div className="max-w-5xl my-0 mx-auto">
           <div className="flex flex-col sm:justify-around items-center justify-center border-solid border-b-2 border-zinc-400 py-2">
@@ -151,12 +151,12 @@ const UserProfile = () => {
             </div>
           </div>
 
-          <div className="m-8 flex flex-wrap gap-8 sm:justify-center">
+          <div className="p-8 flex flex-wrap gap-8 sm:justify-center">
             {userProfile.posts.map((item) => {
               return (
                 <img
                   key={item._id}
-                  className="w-72 h-72 object-fit"
+                  className="w-72 h-72 object-cover"
                   src={item.photo}
                   alt={item.title}
                   loading="lazy"

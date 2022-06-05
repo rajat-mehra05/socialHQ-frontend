@@ -56,7 +56,7 @@ const Login = () => {
 
   return (
     <>
-      <div className="sm:flex-row flex flex-col gap-12 sm:gap-32 py-2 min-h-screen justify-center bg-gradient-to-l from-slate-200 to-slate-600">
+      <div className="sm:flex-row flex flex-col gap-12 sm:gap-32 py-2 min-h-[calc(100vh-80px)] justify-center items-center bg-white">
         <div className="flex flex-col justify-center items-center">
           <div className="flex items-center gap-2 bg-gray-800 justify-center mb-2 w-full">
             <span className="w-8 h-8">
@@ -68,7 +68,7 @@ const Login = () => {
               Log in to your account{" "}
             </h1>
           </div>
-          <div className="p-8 bg-gradient-to-l from-slate-200 to-slate-600">
+          <div className="p-8 bg-gradient-to-l from-slate-200 to-slate-600 rounded-lg">
             <div className="flex flex-col">
               <input
                 type="email"
@@ -97,13 +97,7 @@ const Login = () => {
             </div>
           </div>
         </div>
-        <div className="sm:w-[600px] w-96">
-          <img
-            src="/login.png"
-            alt="picture1"
-            className="w-full h-full object-cover"
-          />
-        </div>
+        <img src="/login.png" alt="picture1" className="h-full" />
       </div>
     </>
   );

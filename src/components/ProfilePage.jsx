@@ -68,7 +68,7 @@ const ProfilePage = () => {
   };
 
   return (
-    <div className="bg-gradient-to-l from-gray-200 to-zinc-400">
+    <div className="bg-white">
       <div className="max-w-5xl my-0 mx-auto">
         <div className="flex flex-col sm:justify-around items-center justify-center border-solid border-b-2 border-zinc-400 py-2">
           <div className="w-28 h-28 rounded-full sm:w-48 sm:h-48 overflow-hidden">
@@ -117,7 +117,7 @@ const ProfilePage = () => {
         </div>
       </div>
 
-      <div className="m-8 flex flex-wrap gap-8 sm:justify-center">
+      <div className="p-8 flex flex-wrap gap-8 sm:justify-center">
         {photos.map((item) => {
           return (
             <img
