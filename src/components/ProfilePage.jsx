@@ -1,4 +1,5 @@
 import { useContext, useEffect, useState } from "react";
+import { API_URL } from "../constants";
 import { UserContext } from "../context/Context";
 
 const ProfilePage = () => {
@@ -8,7 +9,7 @@ const ProfilePage = () => {
   const { state, dispatch } = useContext(UserContext);
 
   useEffect(() => {
-    fetch("/mypost", {
+    fetch(`${API_URL}/mypost`, {
       headers: {
         Authorization: "Bearer " + localStorage.getItem("jwt"),
       },

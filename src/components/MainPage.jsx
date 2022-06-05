@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
+import { API_URL } from "../constants";
 import Card from "./Card";
 
 const MainPage = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("/allpost", {
+    fetch(`${API_URL}/allpost`, {
       headers: {
         Authorization: "Bearer " + localStorage.getItem("jwt"),
       },

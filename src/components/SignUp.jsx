@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import { API_URL } from "../constants";
 
 const SignUp = () => {
   const [name, setName] = useState("");
@@ -39,7 +40,7 @@ const SignUp = () => {
       return;
     }
 
-    fetch("https://socialhq-api.up.railway.app/signup", {
+    fetch(`${API_URL}/signup`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

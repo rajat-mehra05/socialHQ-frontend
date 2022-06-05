@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { API_URL } from "../constants";
 import { UserContext } from "../context/Context";
 
 const UserProfile = () => {
@@ -11,7 +12,7 @@ const UserProfile = () => {
   );
 
   useEffect(() => {
-    fetch(`/user/${userid}`, {
+    fetch(`${API_URL}/user/${userid}`, {
       headers: {
         Authorization: "Bearer " + localStorage.getItem("jwt"),
       },
@@ -24,7 +25,7 @@ const UserProfile = () => {
   }, [userid]);
 
   const followUser = () => {
-    fetch("/follow", {
+    fetch(`${API_URL}/follow`, {
       method: "put",
       headers: {
         "Content-Type": "application/json",
@@ -56,7 +57,7 @@ const UserProfile = () => {
   };
 
   const unfollowUser = () => {
-    fetch("/unfollow", {
+    fetch(`${API_URL}/unfollow`, {
       method: "put",
       headers: {
         "Content-Type": "application/json",

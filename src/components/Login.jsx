@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import { API_URL } from "../constants";
 import { UserContext } from "../context/Context";
 
 const Login = () => {
@@ -21,7 +22,7 @@ const Login = () => {
       return;
     }
 
-    fetch("https://socialhq-api.up.railway.app/login", {
+    fetch(`${API_URL}/login`, {
       method: "post",
       headers: {
         "Content-Type": "application/json",

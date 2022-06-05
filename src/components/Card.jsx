@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { API_URL } from "../constants";
 import { UserContext } from "../context/Context";
 
 const Card = ({ item, setData, data }) => {
@@ -8,7 +9,7 @@ const Card = ({ item, setData, data }) => {
 
   //like post
   const likePost = (id) => {
-    fetch("/like", {
+    fetch(`${API_URL}/like`, {
       method: "put",
       headers: {
         "Content-Type": "application/json",
@@ -37,7 +38,7 @@ const Card = ({ item, setData, data }) => {
 
   //unlike post
   const unlikePost = (id) => {
-    fetch("/unlike", {
+    fetch(`${API_URL}/unlike`, {
       method: "put",
       headers: {
         "Content-Type": "application/json",
@@ -66,7 +67,7 @@ const Card = ({ item, setData, data }) => {
 
   // add comment
   const addComment = (text, postId) => {
-    fetch("/comment", {
+    fetch(`${API_URL}/comment`, {
       method: "put",
       headers: {
         "Content-Type": "application/json",
@@ -95,7 +96,7 @@ const Card = ({ item, setData, data }) => {
 
   //delete post
   const deletePost = (postid) => {
-    fetch(`/deletepost/${postid}`, {
+    fetch(`${API_URL}/deletepost/${postid}`, {
       method: "delete",
       headers: {
         Authorization: "Bearer " + localStorage.getItem("jwt"),
