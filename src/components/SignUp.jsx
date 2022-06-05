@@ -39,7 +39,7 @@ const SignUp = () => {
       return;
     }
 
-    fetch("/signup", {
+    fetch("https://socialhq-api.up.railway.app/signup", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
