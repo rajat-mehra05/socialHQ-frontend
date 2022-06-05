@@ -8,6 +8,11 @@
   - Update own profile picture
   - Search other users
 
+## Todo 
+ - Add search functionality
+ - Add login test user functionality
+ - Ability to delete and edit comments by the user
+
 ## Preview
 
 ![image](https://user-images.githubusercontent.com/35677839/172062216-79967c0c-680d-46af-a762-a0b71e86b3c4.png)
