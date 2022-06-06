@@ -64,7 +64,10 @@ const CreatePost = () => {
       {loading ? (
         <div className="flex justify-center items-center min-h-[calc(100vh-80px)]">
           <RingLoader color={"#1F2937"} loading={loading} size={60} />
-          <p className="text-gray-900"> Creating your post ... </p>
+          <p className="text-gray-900 italic font-semibold">
+            {" "}
+            Creating your post ...{" "}
+          </p>
         </div>
       ) : (
         <div className="flex flex-col justify-center items-center sm:pt-20 pt-12">

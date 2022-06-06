@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { RingLoader } from "react-spinners";
 import { API_URL } from "../constants";
 import { UserContext } from "../context/Context";
 
@@ -167,7 +168,13 @@ const UserProfile = () => {
           </div>
         </div>
       ) : (
-        <h2>Loading...</h2>
+        <div className="flex justify-center items-center min-h-screen">
+          <RingLoader color={"#1F2937"} size={70} />
+          <p className="text-gray-900 italic font-semibold">
+            {" "}
+            Fetching user profile ...{" "}
+          </p>
+        </div>
       )}
     </div>
   );

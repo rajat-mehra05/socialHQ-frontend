@@ -197,7 +197,7 @@ const Card = ({ item, setData, data }) => {
               />
             ) : (
               <i
-                className="fas fa-heart text-[#D7E0EB] text-2xl"
+                className="fas fa-heart text-[#727981] text-2xl"
                 onClick={() => {
                   likePost(item._id);
                 }}
@@ -206,7 +206,7 @@ const Card = ({ item, setData, data }) => {
           </span>
 
           <span onClick={handleSharePost}>
-            <i className="fas fa-share-square text-[#D7E0EB] text-2xl cursor-pointer"></i>
+            <i className="fas fa-share-square text-[#727981] text-2xl cursor-pointer"></i>
           </span>
         </div>
 

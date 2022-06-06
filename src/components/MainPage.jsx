@@ -28,7 +28,10 @@ const MainPage = () => {
       {loading ? (
         <div className="flex justify-center items-center min-h-screen">
           <RingLoader color={"#1F2937"} loading={loading} size={70} />
-          <p className="text-gray-900"> Fetching your feed ... </p>
+          <p className="text-gray-900 italic font-semibold">
+            {" "}
+            Fetching your feed ...{" "}
+          </p>
         </div>
       ) : (
         <div className="grid grid-cols-1 lg:grid-cols-3 sm:grid-cols-2 gap-4 p-8 mx-auto bg-white">

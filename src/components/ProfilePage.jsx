@@ -77,7 +77,10 @@ const ProfilePage = () => {
       {loading ? (
         <div className="flex justify-center items-center min-h-[calc(100vh-80px)]">
           <RingLoader color={"#1F2937"} loading={loading} size={60} />
-          <p className="text-gray-900"> Fetching your posts ... </p>
+          <p className="text-gray-900 italic font-semibold">
+            {" "}
+            Fetching your posts ...{" "}
+          </p>
         </div>
       ) : (
         <div className="bg-white">
