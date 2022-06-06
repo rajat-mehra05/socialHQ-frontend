@@ -102,7 +102,7 @@ const Login = () => {
                 Login as guest
               </button>
 
-              <h3 className="hover:underline italic">
+              <h3 className="hover:underline italic font-semibold text-slate-900">
                 <Link to="/signup"> New to Social HQ! Sign up here. </Link>
               </h3>
             </div>

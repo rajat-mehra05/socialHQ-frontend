@@ -129,7 +129,7 @@ const SignUp = () => {
             >
               Sign up
             </button>
-            <h3 className="hover:underline">
+            <h3 className="hover:underline text-slate-900 italic font-semibold">
               <Link to="/login"> Already have an account? Log in. </Link>
             </h3>
           </div>
