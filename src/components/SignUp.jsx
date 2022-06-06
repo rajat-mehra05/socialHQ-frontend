@@ -81,7 +81,7 @@ const SignUp = () => {
   }, [url]);
 
   return (
-    <div className="sm:flex-row flex flex-col gap-12 sm:gap-32 py-6 justify-center min-h-[calc(100vh-80px)] bg-white">
+    <div className="sm:flex-row flex flex-col gap-12 sm:gap-32 py-2 min-h-[calc(100vh-80px)] justify-center items-center bg-white">
       <div className="flex flex-col justify-center items-cente">
         <div className="flex items-center gap-2 bg-gray-800 justify-center mb-2">
           <span className="w-8 h-8">

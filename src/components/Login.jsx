@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import { API_URL } from "../constants";
+import { API_URL, EMAIL, PASSWORD } from "../constants";
 import { UserContext } from "../context/Context";
 
 const Login = () => {
@@ -11,7 +11,7 @@ const Login = () => {
 
   const { dispatch } = useContext(UserContext);
 
-  const PostData = () => {
+  const PostData = (email, password) => {
     // validation for email
     if (
       !/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
@@ -55,6 +55,10 @@ const Login = () => {
       });
   };
 
+  const handleGuestLogin = () => {
+    PostData(EMAIL, PASSWORD);
+  };
+
   return (
     <>
       <div className="sm:flex-row flex flex-col gap-12 sm:gap-32 py-2 min-h-[calc(100vh-80px)] justify-center items-center bg-white">
@@ -86,14 +90,20 @@ const Login = () => {
                 placeholder="Enter password"
               />
               <button
-                onClick={() => PostData()}
+                onClick={() => PostData(email, password)}
                 className="bg-gray-800 hover:bg-gray-900 text-white text-lg font-semibold h-12 mb-4 rounded px-4 w-full"
               >
                 Login
               </button>
+              <button
+                onClick={handleGuestLogin}
+                className="bg-gray-800 hover:bg-gray-900 text-white text-lg font-semibold h-12 mb-4 rounded px-4 w-full"
+              >
+                Login as guest
+              </button>
 
               <h3 className="hover:underline italic">
-                <Link to="/login"> New to Social HQ! Sign up here. </Link>
+                <Link to="/signup"> New to Social HQ! Sign up here. </Link>
               </h3>
             </div>
           </div>

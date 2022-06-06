@@ -115,7 +115,7 @@ const Card = ({ item, setData, data }) => {
   //handleSharePost
   const handleSharePost = async () => {
     await navigator.share({
-      url: "https://socialhq.com/post/3er467",
+      url: `https://social-hq.vercel.app/post/${item._id}`,
       text: item.body,
       title: item.body,
     });
@@ -128,7 +128,7 @@ const Card = ({ item, setData, data }) => {
 
   return (
     <div
-      className="shadow-sm max-w-2xl p-2 rounded-2xl bg-[#00000] border-2 border-gray-200 bg-[#F6FBF4]"
+      className="shadow-sm max-w-2xl p-2 rounded-2xl bg-gradient-to-l from-gray-100 to-gray-200"
       key={item._id}
     >
       <div className="flex justify-between p-6">
@@ -172,7 +172,10 @@ const Card = ({ item, setData, data }) => {
       </div>
 
       {/* image section */}
-
+      <h3 className="font-semibold text-slate-900 py-1 pl-2 italic">
+        {" "}
+        {item.body}{" "}
+      </h3>
       <img
         className="w-full h-64 object-cover rounded-2xl"
         src={item.photo}
@@ -207,12 +210,10 @@ const Card = ({ item, setData, data }) => {
           </span>
         </div>
 
-        <span className="font-normal">
+        <span className="font-semibold italic">
           {" "}
           Liked by {item.likes.length} people{" "}
         </span>
-
-        <h3 className="font-semibold"> {item.body} </h3>
 
         <div className="py-2">
           {item.comments.map((record) => {
@@ -239,7 +240,7 @@ const Card = ({ item, setData, data }) => {
               onChange={(e) => {
                 setComment(e.target.value);
               }}
-              className="rounded w-full h-12 px-4 bg-gray-700 text-emerald-50"
+              className="rounded w-full h-12 px-4 bg-white border-2 border-gray-900 text-gray-900"
               placeholder="add a comment..."
             />
           </form>
