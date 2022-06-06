@@ -14,6 +14,7 @@ _Salient features_
 
 - Add search functionality
 - Ability to delete and edit comments by the user
+- Need to make responsive navbar (hamburger menu)
 
 ## Preview
 
