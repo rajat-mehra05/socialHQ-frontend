@@ -128,7 +128,7 @@ const Card = ({ item, setData, data }) => {
 
   return (
     <div
-      className="shadow-sm max-w-2xl p-2 rounded-2xl bg-gradient-to-l from-gray-100 to-gray-200"
+      className="shadow-sm max-w-2xl p-2 rounded-2xl bg-gradient-to-r from-[#e9f1ed] to-gray-200"
       key={item._id}
     >
       <div className="flex justify-between p-6">
@@ -165,7 +165,7 @@ const Card = ({ item, setData, data }) => {
           <button>
             <i
               onClick={() => deletePost(item._id)}
-              className="fas fa-trash trash-icon hover:cursor-pointer text-gray-800 hover:text-red-700"
+              className="fas fa-trash trash-icon hover:cursor-pointer hover:scale-105 text-gray-800 hover:text-red-700"
             />
           </button>
         )}
@@ -210,7 +210,7 @@ const Card = ({ item, setData, data }) => {
           </span>
         </div>
 
-        <span className="font-semibold italic">
+        <span className="font-semibold italic text-gray-900">
           {" "}
           Liked by {item.likes.length} people{" "}
         </span>
@@ -220,7 +220,9 @@ const Card = ({ item, setData, data }) => {
             return (
               <>
                 <h6 key={record._id}>
-                  <span className="font-semibold">{record?.postedBy.name}</span>{" "}
+                  <span className="font-semibold text-gray-900">
+                    {record?.postedBy.name}
+                  </span>{" "}
                   {record.text}
                 </h6>
               </>

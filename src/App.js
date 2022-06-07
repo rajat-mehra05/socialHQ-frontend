@@ -69,7 +69,9 @@ function App() {
   return (
     <Provider value={{ state, dispatch }}>
       <Router>
-        <Navbar />
+        <div className="relative pb-20">
+          <Navbar />
+        </div>
         <div>
           <ToastContainer />
           <Routing />

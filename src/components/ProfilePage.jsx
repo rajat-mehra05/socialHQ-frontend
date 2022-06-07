@@ -84,7 +84,7 @@ const ProfilePage = () => {
         </div>
       ) : (
         <div className="bg-white">
-          <div className="max-w-5xl my-0 mx-auto">
+          <div className="max-w-5xl py-8 mx-auto">
             <div className="flex flex-col sm:justify-around items-center justify-center border-solid border-b-2 border-zinc-400 py-2">
               <div className="w-28 h-28 rounded-full sm:w-48 sm:h-48 overflow-hidden">
                 <img
@@ -96,7 +96,7 @@ const ProfilePage = () => {
               </div>
 
               <div className="mt-8">
-                <h2 className="font-bold text-center text-xl">
+                <h2 className="font-bold text-center text-xl text-gray-900">
                   {" "}
                   {state?.name}{" "}
                 </h2>
@@ -136,7 +136,7 @@ const ProfilePage = () => {
             </div>
           </div>
 
-          <div className="p-8 flex flex-wrap gap-8 sm:justify-center">
+          <div className="p-4 flex flex-wrap gap-8 sm:justify-center">
             {photos.length ? (
               photos.map((item) => {
                 return (

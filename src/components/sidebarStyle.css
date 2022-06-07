@@ -1,0 +1,49 @@
+.sidebar {
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  margin-right: -260px;
+  height: 100vh;
+  z-index: 100;
+  max-width: 260px;
+  min-width: 260px;
+  color: white;
+  transition: all ease-in-out 0.8s;
+}
+
+.sidebarSide {
+  background: rgba(255, 255, 255, 0.2);
+  height: 100%;
+  left: 0;
+  z-index: 1;
+  right: 0;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+}
+
+.innerSidebar {
+  background-color: #121921;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  box-shadow: -10px 10px 2px rgb(0 0 0 / 40%);
+  height: inherit;
+  padding: 4rem 2rem 2rem 2rem;
+}
+
+.sidebar ul li {
+  margin: 1rem 0rem;
+  font-size: 1.4rem;
+}
+
+.sidebarOpen {
+  margin-right: 0;
+}
+
+.cross {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  font-size: 20px;
+  color: white;
+}
