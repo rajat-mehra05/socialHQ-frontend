@@ -14,15 +14,16 @@ _Salient features_
 
 - Add search functionality
 - Ability to delete and edit comments by the user
-- Need to make responsive navbar (hamburger menu)
 
 ## Preview
 
-![image](https://user-images.githubusercontent.com/35677839/172062216-79967c0c-680d-46af-a762-a0b71e86b3c4.png)
+![image](https://user-images.githubusercontent.com/35677839/172340324-452d2ba2-35f7-433d-ab97-df50e9ca9916.png)
 
-![image](https://user-images.githubusercontent.com/35677839/172062298-a1152062-da55-431c-8c6b-6363a2845172.png)
+![image](https://user-images.githubusercontent.com/35677839/172340417-9c3ab329-de7c-4b3f-b37e-9b3f793ede93.png)
 
-![image](https://user-images.githubusercontent.com/35677839/172062338-cef83385-8610-4c97-9723-d75fe331e933.png)
+![image](https://user-images.githubusercontent.com/35677839/172340647-52ec2fc1-5e4a-4f41-98b9-7687b8e038ab.png)
+
+![image](https://user-images.githubusercontent.com/35677839/172340547-b0f9dcb3-0d8a-46cb-9e3b-ff06b80e4e0a.png)
 
 # Setup
 
