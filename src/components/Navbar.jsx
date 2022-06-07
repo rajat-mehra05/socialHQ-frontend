@@ -1,8 +1,8 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { FaBars } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react/cjs/react.development";
 import { UserContext } from "../context/Context";
+import Sidebar from "./Sidebar";
 
 const Navbar = () => {
   const { state, dispatch } = useContext(UserContext);
@@ -58,7 +58,7 @@ const Navbar = () => {
 
   return (
     <>
-      {/* <Sidebar close={close} setClose={setClose} className="sm:hidden" /> */}
+      <Sidebar close={close} setClose={setClose} className="sm:hidden" />
       <div className="fixed top-0 left-0  flex w-full p-4 z-[99] bg-gradient-to-b from-gray-700 to-transparent">
         <header className="flex justify-between w-full items-center text-white bg-gradient-to-r from-[#0f151a] to-slate-800 h-20">
           <Link to={state ? "/" : "/login"}>
@@ -81,7 +81,7 @@ const Navbar = () => {
           </nav>
           <div className="flex items-center gap-4 sm:hidden pr-2">
             <FaBars
-              className="sm:hidden text-white text-2xl"
+              className="sm:hidden text-white text-2xl cursor-pointer"
               onClick={() => setClose(false)}
             />
           </div>

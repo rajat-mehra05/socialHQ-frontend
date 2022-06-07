@@ -41,7 +41,7 @@ const Sidebar = ({ close, setClose }) => {
             </ul>
           </div>
           <div onClick={() => setClose(true)} className="cross">
-            <ImCross />
+            <ImCross className="cursor-pointer" />
           </div>
         </div>
       </div>
