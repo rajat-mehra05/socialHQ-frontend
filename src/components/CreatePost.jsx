@@ -71,7 +71,7 @@ const CreatePost = () => {
         </div>
       ) : (
         <div className="flex flex-col justify-center items-center sm:pt-20 pt-12">
-          <h1 className="text-3xl text-center text-white w-[345px] bg-gray-900 my-2">
+          <h1 className="text-3xl text-center text-white w-[345px] bg-gray-900 my-2 py-2 rounded-lg">
             {" "}
             Create Post{" "}
           </h1>
@@ -99,7 +99,7 @@ const CreatePost = () => {
               />
               <button
                 onClick={() => uploadImage()}
-                className="bg-gray-800 hover:bg-gray-900 text-white text-lg font-semibold h-12 mt-2 rounded px-4 w-full"
+                className="bg-gradient-to-r from-[#0f151a] to-slate-800 hover:from-slate-800 hover:to-gray-900 text-white text-lg font-semibold h-12 mt-2 rounded px-4 w-full"
               >
                 Post
               </button>

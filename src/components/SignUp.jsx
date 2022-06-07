@@ -83,7 +83,7 @@ const SignUp = () => {
   return (
     <div className="sm:flex-row flex flex-col gap-12 sm:gap-32 py-2 min-h-[calc(100vh-80px)] justify-center items-center bg-white">
       <div className="flex flex-col justify-center items-cente">
-        <div className="flex items-center gap-2 bg-gray-800 justify-center mb-2">
+        <div className="flex items-center gap-2 bg-gray-800 justify-center mb-2 rounded-lg">
           <span className="w-8 h-8">
             {" "}
             <img src="/key.png" alt="key" className="w-full h-full" />{" "}
@@ -125,7 +125,7 @@ const SignUp = () => {
             </div>
             <button
               onClick={() => PostData()}
-              className="bg-gray-800 hover:bg-gray-900 text-white text-lg font-semibold h-12 mb-4 mt-2 rounded px-4 w-full"
+              className="bg-gradient-to-r from-[#0f151a] to-slate-800 hover:from-slate-800 hover:to-gray-900 text-white text-lg font-semibold h-12 mb-4 mt-2 rounded px-4 w-full"
             >
               Sign up
             </button>
