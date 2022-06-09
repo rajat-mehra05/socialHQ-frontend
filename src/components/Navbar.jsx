@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { FaBars } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import { UserContext } from "../context/Context";
+import SearchBar from "./SearchBar";
 import Sidebar from "./Sidebar";
 
 const Navbar = () => {
@@ -13,6 +14,9 @@ const Navbar = () => {
     if (state) {
       return [
         <>
+          <li key="search" className="cursor-pointer">
+            <SearchBar />
+          </li>
           <li className="hover:text-emerald-100 hover:cursor-pointer" key="1">
             {" "}
             <Link to="/createpost">
@@ -76,6 +80,7 @@ const Navbar = () => {
               </h1>
             </div>
           </Link>
+
           <nav className="mr-4 hidden sm:flex">
             <ul className="flex items-center sm:gap-8 gap-4">{renderList()}</ul>
           </nav>
