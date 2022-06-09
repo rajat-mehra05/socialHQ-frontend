@@ -100,7 +100,7 @@ const UserProfile = () => {
   return (
     <div className="bg-white">
       {userProfile ? (
-        <div className="max-w-5xl my-0 mx-auto">
+        <div className="max-w-5xl py-8 mx-auto">
           <div className="flex flex-col sm:justify-around items-center justify-center border-solid border-b-2 border-zinc-400 py-2">
             <div className="w-28 h-28 rounded-full sm:w-48 sm:h-48 overflow-hidden">
               <img
