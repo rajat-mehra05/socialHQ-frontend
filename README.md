@@ -12,7 +12,6 @@ _Salient features_
 
 ## Todo
 
-- Add search functionality
 - Ability to delete and edit comments by the user
 
 ## Preview
