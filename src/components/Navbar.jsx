@@ -84,12 +84,14 @@ const Navbar = () => {
           <nav className="mr-4 hidden sm:flex">
             <ul className="flex items-center sm:gap-8 gap-4">{renderList()}</ul>
           </nav>
-          <div className="flex items-center gap-4 sm:hidden pr-2">
-            <FaBars
-              className="sm:hidden text-white text-2xl cursor-pointer"
-              onClick={() => setClose(false)}
-            />
-          </div>
+          {state && (
+            <div className="flex items-center gap-4 sm:hidden pr-2">
+              <FaBars
+                className="sm:hidden text-white text-2xl cursor-pointer"
+                onClick={() => setClose(false)}
+              />
+            </div>
+          )}
         </header>
       </div>
     </>
