@@ -61,7 +61,7 @@ const Login = () => {
 
   return (
     <>
-      <div className="sm:flex-row flex flex-col gap-12 sm:gap-32 py-2 min-h-[calc(100vh-80px)] justify-center items-center bg-white">
+      <div className="sm:flex-row flex flex-col gap-12 sm:gap-32 py-8 mx-auto min-h-[calc(100vh-80px)] justify-center items-center bg-white">
         <div className="flex flex-col justify-center items-center">
           <div className="flex items-center gap-2 bg-gray-800 justify-center mb-2 w-full rounded-lg">
             <span className="w-8 h-8">

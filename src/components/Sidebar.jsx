@@ -1,9 +1,13 @@
-import React from "react";
+import { useContext } from "react";
 import { ImCross } from "react-icons/im";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { UserContext } from "../context/Context";
 import "./sidebarStyle.css";
 
 const Sidebar = ({ close, setClose }) => {
+  const { state, dispatch } = useContext(UserContext);
+  const navigate = useNavigate();
+
   return (
     <>
       <div
@@ -34,7 +38,16 @@ const Sidebar = ({ close, setClose }) => {
                 <Link to="/profile">My Profile</Link>
               </li>
               <li key="3">
-                <span className="hover:text-emerald-100 hover:cursor-pointer">
+                <span
+                  onClick={() => {
+                    localStorage.clear();
+                    dispatch({
+                      type: "CLEAR",
+                    });
+                    navigate("/login");
+                  }}
+                  className="hover:text-emerald-100 hover:cursor-pointer"
+                >
                   Logout <i className="fas fa-sign-out-alt" />
                 </span>
               </li>
