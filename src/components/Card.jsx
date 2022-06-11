@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { API_URL } from "../constants";
 import { UserContext } from "../context/Context";
@@ -127,10 +127,7 @@ const Card = ({ item, setData, data }) => {
   };
 
   return (
-    <div
-      className="shadow-sm max-w-2xl p-2 rounded-2xl bg-gradient-to-r from-[#e9f1ed] to-gray-200"
-      key={item._id}
-    >
+    <div className="shadow-sm max-w-2xl p-2 rounded-2xl bg-gradient-to-r from-[#e9f1ed] to-gray-200">
       <div className="flex justify-between p-6">
         <div className="flex items-center gap-4">
           <div className="w-12 h-12 rounded-full overflow-hidden">
@@ -218,14 +215,12 @@ const Card = ({ item, setData, data }) => {
         <div className="py-2">
           {item.comments.map((record) => {
             return (
-              <>
-                <h6 key={record._id}>
-                  <span className="font-semibold text-gray-900">
-                    {record?.postedBy.name}
-                  </span>{" "}
-                  {record.text}
-                </h6>
-              </>
+              <h6 key={record._id}>
+                <span className="font-semibold text-gray-900">
+                  {record?.postedBy.name}
+                </span>{" "}
+                {record.text}
+              </h6>
             );
           })}
 

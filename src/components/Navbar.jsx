@@ -11,53 +11,49 @@ const Navbar = () => {
   const [close, setClose] = useState(true);
 
   const renderList = () => {
-    if (state) {
-      return [
-        <>
-          <li key="search" className="cursor-pointer">
-            <SearchBar />
-          </li>
-          <li className="hover:text-emerald-100 hover:cursor-pointer" key="1">
+    return state ? (
+      <>
+        <li className="cursor-pointer">
+          <SearchBar />
+        </li>
+        <li className="hover:text-emerald-100 hover:cursor-pointer">
+          {" "}
+          <Link to="/createpost">
             {" "}
-            <Link to="/createpost">
-              {" "}
-              <i className="fas fa-plus" /> Create Post
-            </Link>
-          </li>
-          <li className="hover:text-emerald-100 hover:cursor-pointer" key="2">
-            {" "}
-            <Link to="/profile">My Profile</Link>
-          </li>
-          <li key="3">
-            <span
-              onClick={() => {
-                localStorage.clear();
-                dispatch({
-                  type: "CLEAR",
-                });
-                navigate("/login");
-              }}
-              className="hover:text-emerald-100 hover:cursor-pointer"
-            >
-              Logout <i className="fas fa-sign-out-alt" />
-            </span>
-          </li>
-        </>,
-      ];
-    } else {
-      return [
-        <>
-          <li className="hover:text-emerald-100 hover:cursor-pointer" key="4">
-            {" "}
-            <Link to="/login"> Login</Link>
-          </li>
-          <li className="hover:text-emerald-100 hover:cursor-pointer" key="5">
-            {" "}
-            <Link to="/signup"> Sign Up</Link>
-          </li>
-        </>,
-      ];
-    }
+            <i className="fas fa-plus" /> Create Post
+          </Link>
+        </li>
+        <li className="hover:text-emerald-100 hover:cursor-pointer">
+          {" "}
+          <Link to="/profile">My Profile</Link>
+        </li>
+        <li>
+          <span
+            onClick={() => {
+              localStorage.clear();
+              dispatch({
+                type: "CLEAR",
+              });
+              navigate("/login");
+            }}
+            className="hover:text-emerald-100 hover:cursor-pointer"
+          >
+            Logout <i className="fas fa-sign-out-alt" />
+          </span>
+        </li>
+      </>
+    ) : (
+      <>
+        <li className="hover:text-emerald-100 hover:cursor-pointer">
+          {" "}
+          <Link to="/login"> Login</Link>
+        </li>
+        <li className="hover:text-emerald-100 hover:cursor-pointer">
+          {" "}
+          <Link to="/signup"> Sign Up</Link>
+        </li>
+      </>
+    );
   };
 
   return (
