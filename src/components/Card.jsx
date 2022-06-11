@@ -237,7 +237,7 @@ const Card = ({ item, setData, data }) => {
               onChange={(e) => {
                 setComment(e.target.value);
               }}
-              className="rounded w-full h-12 px-4 bg-white border-2 border-gray-900 text-gray-900"
+              className="rounded-lg w-full h-12 px-4 bg-white border-2 border-gray-300 focus:outline-none focus:border-gray-600 text-gray-900"
               placeholder="add a comment..."
             />
           </form>
