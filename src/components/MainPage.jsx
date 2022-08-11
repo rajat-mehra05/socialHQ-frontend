@@ -20,6 +20,9 @@ const MainPage = () => {
       })
       .finally(() => {
         setLoading(false);
+      })
+      .catch((err) => {
+        console.log(err);
       });
   }, []);
 
